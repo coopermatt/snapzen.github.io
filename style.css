@@ -9,6 +9,18 @@ footer a{
 #header, #header h1{
     font-size: 1.5em;
 }
+#help-guide a{
+    color: rgb(226, 226, 226);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#help-guide a:hover{
+    color: rgb(221, 127, 142);
+}
+#help-guide{
+    margin-top: 20px;
+}
 footer{
     color: black;
     font-size: 0.8em;
