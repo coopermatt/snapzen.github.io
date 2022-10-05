@@ -65,7 +65,7 @@ const confiscates = [
 ];
 
 $(document).ready(function(){
-
+    var confiscationBox = null;
     var stackingBox = null;
     var fineBox = null;
     var jailBox = null;
@@ -89,6 +89,8 @@ $(document).ready(function(){
             stackingBox = $("#stacking-" + idOfSelected);
             fineBox = $("#fine-" + idOfSelected);
             jailBox = $("#jail-" + idOfSelected);
+            confiscationBox = $("#confiscate-" + idOfSelected);
+
             if (charge.stackable) {
                 stackingBox.prop('disabled', false);
             } else {
@@ -102,10 +104,10 @@ $(document).ready(function(){
                 $(this).removeClass("noted");
             }
 
-
+            confiscationBox.val(charge.confiscate);
+            console.log(confiscationBox.val());
 
         }
-
 
 
         
@@ -116,6 +118,8 @@ $(document).ready(function(){
 
         updateTotalJail(jail);
         updateTotalFine(fine);
+
+        updateConfiscation();
 
 
     });
@@ -150,6 +154,28 @@ $(document).ready(function(){
     });
 
 });
+
+
+function updateConfiscation(){
+    var highestConfID = null;
+    $('.confiscation').each(function(){
+        var thisID = $(this).val();
+        if (thisID > highestConfID) {
+            highestConfID = thisID;
+        }
+    });
+
+    var confiscationChoosen = $.grep(confiscates, function(n, i){
+        return n.id ==highestConfID;
+    });
+
+    if (confiscationChoosen.length > 0){
+        id = confiscationChoosen[0];
+        console.log(id.conf);
+        $('#confiscate').val(id.conf);
+        
+    }
+}
 
 
 function updateTotalFine(){
@@ -202,12 +228,16 @@ function calculateJail(jailVal, stackVal){
 function resetCalc(){
     $('select').each(function(){
         $(this).val("");
+        $(this).removeClass("noted");
     })
     $('.stacking').each(function(){
         $(this).val(1);
         $(this).prop('disabled', true);
     })
     $('.fines').each(function(){
+        $(this).val(0);
+    })
+    $('.confiscation').each(function(){
         $(this).val(0);
     })
     $('.jail').each(function(){

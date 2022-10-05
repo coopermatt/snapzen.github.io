@@ -6,30 +6,38 @@ body{
 footer a{
     color: black;
 }
+#header, #header h1{
+    font-size: 1.5em;
+}
 footer{
     color: black;
     font-size: 0.8em;
     text-align:center;
     margin-bottom: 0px;
 }
-
+.command{
+    color: black;
+    font-size: 0.7em;
+}
 textarea#confiscate{
     resize: none;
     overflow: hidden;
     text-align:center;
 }
 .options{
-    margin-top:40%;
+    
     vertical-align: middle;
     align-content: center;
     text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .noted{
     background-color: #ff8e8e;
     border-color: #660000;
 }
 .reset-button{
-    margin-top: 10%;
+    margin-top: 5%;
     height: 80px;
     width: 180px;
 }

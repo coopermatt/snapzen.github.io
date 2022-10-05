@@ -15,8 +15,10 @@
             <div class="col">
             </div>
             <div class="col-6">
-                <img src="synlogo.png" width="80">
-                <h1>Sheriffs Department Charge Calculator</h1>
+                <div id="header">
+                    <img src="synlogo.png" width="80">
+                    <h1>Sheriffs Department Charge Calculator</h1>
+                </div>
             </div>
             <div class="col">
             </div>
@@ -657,9 +659,19 @@
                     <input id="jail-8" class="jail charge-selector form-control" type="number" disabled value="0">
                     <input id="jail-9" class="jail charge-selector form-control" type="number" disabled value="0">
                     <input id="jail-10" class="jail charge-selector form-control" type="number" disabled value="0">
+
+                    <input id="confiscate-1" class="confiscation charge-selector form-control" type="number" disabled value="0" hidden>
+                    <input id="confiscate-2" class="confiscation charge-selector form-control" type="number" disabled value="0" hidden>
+                    <input id="confiscate-3" class="confiscation charge-selector form-control" type="number" disabled value="0" hidden>
+                    <input id="confiscate-4" class="confiscation charge-selector form-control" type="number" disabled value="0" hidden>
+                    <input id="confiscate-5" class="confiscation charge-selector form-control" type="number" disabled value="0" hidden>
+                    <input id="confiscate-6" class="confiscation charge-selector form-control" type="number" disabled value="0" hidden>
+                    <input id="confiscate-7" class="confiscation charge-selector form-control" type="number" disabled value="0" hidden>
+                    <input id="confiscate-8" class="confiscation charge-selector form-control" type="number" disabled value="0" hidden>
+                    <input id="confiscate-9" class="confiscation charge-selector form-control" type="number" disabled value="0" hidden>
+                    <input id="confiscate-10" class="confiscation charge-selector form-control" type="number" disabled value="0" hidden>
                 </div>
-                <div class="col-3">
-                    <div class="row">
+                <div class="col-3 col-sm">
                         <div class="options">
                             <div class="calc-title"><h3>Options:</h3></div>
                             <div class="row">
@@ -682,7 +694,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
 
             </div>
@@ -693,6 +704,7 @@
                             <div class="option-title">Total Jail (Months):</div>
                         
                             <input id="totalJail" class="charge-selector form-control" type="number" disabled value="0">
+                            <div class="command">/jail [ID] [AMOUNT]</div>
 
                     </div>
                     <div class="row">
@@ -700,6 +712,7 @@
                             <div class="option-title">Total Fine ($):</div>
                         
                             <input id="totalFine" class="charge-selector form-control" type="number" disabled value="0">
+                            <div class="command">/bill [AMOUNT] [ID]</div>
                     </div>
                 </div>
                 <div class="col">
@@ -707,7 +720,7 @@
                         <div class="col">
                             <div class="option-title">Confiscate:</div>
                         
-                            <textarea id="confiscate" class="charge-selector form-control" rows="4" type="text" disabled>🚧👷‍♀️ UNDER CONSTRUCTION 👷‍♀️🚧</textarea>
+                            <textarea id="confiscate" class="charge-selector form-control" rows="5" type="text" disabled>N/A</textarea>
                         </div>
                     </div>
                 </div>
