@@ -217,5 +217,6 @@ function resetCalc(){
     $('#totalFine').val(0);
     $('#confiscate').val("N/A");
     $('#note').val("All is good.");
+    $('#note').prop('rows', 1);
 
 }
