@@ -64,8 +64,6 @@ const confiscates = [
     { id: 5, conf: "Removal of all Weapons and Contraband. If surrender only removal of Contraband" }
 ];
 
-const calcNote = "You might wanna check some of your charges that got a red box next to it in the law directory to make sure you get the correct sentence/fine.";
-
 $(document).ready(function(){
 
     var stackingBox = null;
@@ -99,13 +97,18 @@ $(document).ready(function(){
             }
 
             if (charge.note) {
-                $('#note').val(calcNote);
-                $('#note').prop('rows', 2);
+                $(this).addClass("noted");
             } else {
-                $('#note').val("All is good.");
-                $('#note').prop('rows', 1);
+                $(this).removeClass("noted");
             }
+
+
+
         }
+
+
+
+        
         fine = calculateFine(charge.fine, stackingBox.val());
         fineBox.val(fine);
         jail = calculateFine(charge.jail, stackingBox.val());
@@ -113,6 +116,7 @@ $(document).ready(function(){
 
         updateTotalJail(jail);
         updateTotalFine(fine);
+
 
     });
 
@@ -146,6 +150,7 @@ $(document).ready(function(){
     });
 
 });
+
 
 function updateTotalFine(){
     var totalFineBox = $('#totalFine');
@@ -216,7 +221,4 @@ function resetCalc(){
     $('#totalJail').val(0);
     $('#totalFine').val(0);
     $('#confiscate').val("N/A");
-    $('#note').val("All is good.");
-    $('#note').prop('rows', 1);
-
 }

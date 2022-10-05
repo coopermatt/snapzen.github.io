@@ -4,7 +4,7 @@ body{
     color: white;
 }
 
-textarea#note{
+textarea#confiscate{
     resize: none;
     overflow: hidden;
     text-align:center;
@@ -15,9 +15,12 @@ textarea#note{
     align-content: center;
     text-align: center;
 }
-
+.noted{
+    background-color: #ff8e8e;
+    border-color: #660000;
+}
 .reset-button{
-    margin-top: 30%;
+    margin-top: 10%;
     height: 80px;
     width: 180px;
 }
@@ -27,7 +30,7 @@ textarea#note{
     align-content:center;
     text-align:center;
     margin:auto;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 input[type="number"]{
     text-align: center;
