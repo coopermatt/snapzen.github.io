@@ -3,6 +3,15 @@ body{
     background-color: #64666A;
     color: white;
 }
+footer a{
+    color: black;
+}
+footer{
+    color: black;
+    font-size: 0.8em;
+    text-align:center;
+    margin-bottom: 0px;
+}
 
 textarea#confiscate{
     resize: none;
