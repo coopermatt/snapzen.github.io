@@ -183,14 +183,9 @@ function updateTotalJail(){
     })
 
     if (totalJail > 60) {
-        if($('#harsh-mode').is(':checked')){
-            totalJailBox.val(totalJail);
-        } else {
-            totalJailBox.val(60);
-        }
-    } else {
-        
-    totalJailBox.val(totalJail);
+        totalJailBox.val(60);
+    } else {    
+        totalJailBox.val(totalJail);
     } 
 
 }
