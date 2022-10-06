@@ -21,6 +21,13 @@ footer a{
 #help-guide{
     margin-top: 20px;
 }
+
+#important-link{
+    color: white;
+}
+#important-link:hover{
+    color: black;
+}
 footer{
     color: black;
     font-size: 0.8em;
