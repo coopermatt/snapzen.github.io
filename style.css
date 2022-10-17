@@ -3,6 +3,31 @@ body{
     background-color: #64666A;
     color: white;
 }
+
+.text-muted {
+    color: #111111 !important;
+}
+
+.changelog{
+background-color: rgba(8, 8, 8, 0.178);
+border-radius: 25px;
+margin-top: 50px;
+padding:10px;
+}
+#changelog-link{
+    position:absolute;
+    right: 10px;
+    top: 10px;
+}
+#changelog-link a{
+    color:rgb(10, 10, 10);
+}
+
+#changelog-link a:hover{
+    color: #660000;
+}
+
+
 footer a{
     color: black;
 }
@@ -16,7 +41,7 @@ footer a{
 }
 
 #help-guide a:hover{
-    color: rgb(221, 127, 142);
+    color: #660000;
 }
 #help-guide{
     margin-top: 20px;
