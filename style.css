@@ -24,6 +24,7 @@ footer a{
 
 #important-link{
     color: white;
+    font-weight: bold;
 }
 #important-link:hover{
     color: black;
