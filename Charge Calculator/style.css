@@ -1,0 +1,138 @@
+body{
+    margin: 0px;
+    background-color: #64666A;
+    color: white;
+}
+
+.text-muted {
+    color: #111111 !important;
+}
+
+.changelog{
+background-color: rgba(8, 8, 8, 0.178);
+border-radius: 25px;
+margin-top: 50px;
+padding:10px;
+}
+#changelog-link{
+    position:absolute;
+    right: 10px;
+    top: 10px;
+}
+#changelog-link a{
+    color:rgb(10, 10, 10);
+}
+
+#changelog-link a:hover{
+    color: #660000;
+}
+
+
+footer a{
+    color: black;
+}
+#header, #header h1{
+    font-size: 1.5em;
+}
+#help-guide a{
+    color: rgb(226, 226, 226);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#help-guide a:hover{
+    color: #660000;
+}
+#help-guide{
+    margin-top: 20px;
+}
+
+#important-link{
+    color: white;
+    font-weight: bold;
+}
+#important-link:hover{
+    color: black;
+}
+footer{
+    color: black;
+    font-size: 0.8em;
+    text-align:center;
+    margin-bottom: 0px;
+}
+.command{
+    color: black;
+    font-size: 0.7em;
+}
+textarea#confiscate{
+    resize: none;
+    overflow: hidden;
+    text-align:center;
+}
+.options{
+    
+    vertical-align: middle;
+    align-content: center;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.noted{
+    background-color: #ff8e8e;
+    border-color: #660000;
+}
+.reset-button{
+    margin-top: 5%;
+    height: 80px;
+    width: 180px;
+}
+
+.calc-wrapper{
+    width:60vw;
+    align-content:center;
+    text-align:center;
+    margin:auto;
+    margin-top: 20px;
+}
+input[type="number"]{
+    text-align: center;
+}
+input[type="number"]:disabled{
+    background: #2e2e2e;
+    border-color: #0e0e0e;
+    color: rgb(209, 209, 209);
+}
+input#confiscate{
+    text-align:center;
+}
+input.stacking:disabled{
+    color: #2e2e2e;
+}
+.calc-title{
+    font-weight:bold;
+    color:rgb(10, 10, 10);
+}
+.charge-selector{
+    margin-top:5px;
+}
+.info-box{
+    color: white;
+    padding:10px;
+}
+.footer-wrapper{
+    margin-top:5px;
+}
+.information{
+    background-color: #B45F06;
+}
+.important{
+    background-color: #660000;
+
+}
+
+.option-title{
+    color:rgb(10, 10, 10);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+}
