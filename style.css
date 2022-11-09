@@ -17,7 +17,7 @@ padding:10px;
 #changelog-link{
     position:absolute;
     right: 10px;
-    top: 10px;
+    top: 50px;
 }
 #changelog-link a{
     color:rgb(10, 10, 10);
