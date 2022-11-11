@@ -35,7 +35,6 @@ const chargeList = [
     { charge: 'Assault - 2nd Offense', fine: 35, jail: 10, note: false, stackable: false, confiscate: 0 }, 
     { charge: 'Assault - Continuous', fine: 50, jail: 15, note: false, stackable: false, confiscate: 0 },
     { charge: 'Kidnapping', fine: 25, jail: 5, note: false, stackable: false, confiscate: 0 }, 
-    { charge: 'Attempted Corruption Of A Court Officer', fine: 30, jail: 15, note: true, stackable: true, confiscate: 0 },
     { charge: 'Obstruction Of A Court Officer', fine: 25, jail: 5, note: false, stackable: false, confiscate: 0 }, 
     { charge: 'Evading Justice', fine: 25, jail: 5, note: false, stackable: false, confiscate: 0 },
     { charge: 'Failure To Comply With A Lawful Order', fine: 25, jail: 5, note: false, stackable: false, confiscate: 0 }, 
