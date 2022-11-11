@@ -27,6 +27,7 @@ const chargeList = [
     { charge: 'Theft - Item(s) Worth > $150', fine: 50, jail: 15, note: false, stackable: false, confiscate: 3 },
     { charge: 'Theft - Item(s) Worth > $500', fine: 100, jail: 15, note: false, stackable: false, confiscate: 3 }, 
     { charge: 'Theft - Item(s) Worth > $1500', fine: 150, jail: 15, note: false, stackable: false, confiscate: 3 },
+    { charge: 'Corruption of a A Court Officer', fine: 30, jail: 15, note: false, stackable: true, confiscate: 0 },
     { charge: 'Impersonating A Court Officer', fine: 100, jail: 15, note: false, stackable: false, confiscate: 3 }, 
     { charge: 'Brandishing', fine: 25, jail: 5, note: true, stackable: false, confiscate: 0 },
     { charge: 'Assault', fine: 25, jail: 5, note: false, stackable: false, confiscate: 0 }, 
