@@ -21,14 +21,15 @@ const chargeList = [
     { charge: 'Criminal Threats', fine: 25, jail: 5, note: true, stackable: true, confiscate: 0 }, 
     { charge: 'Disorderly Conduct - 1st Offense', fine: 25, jail: 0, note: false, stackable: false, confiscate: 0 },
     { charge: 'Disorderly Conduct - 2nd Offense', fine: 50, jail: 5, note: false, stackable: false, confiscate: 0 }, 
-    { charge: 'Disorderly Conduct - Continuous', fine: 80, jail: 10, note: false, stackable: false, confiscate: 0 },
+    { charge: 'Disorderly Conduct - Continuous', fine: 80, jail: 15, note: false, stackable: false, confiscate: 0 },
+    { charge: 'Possession of a Scoped Weapon (No License)', fine: 100, jail: 0, note: false, stackable: false, confiscate: 1 },
 
     { charge: 'Theft - Item(s) Worth < $150', fine: 25, jail: 10, note: false, stackable: false, confiscate: 3 }, 
     { charge: 'Theft - Item(s) Worth > $150', fine: 50, jail: 15, note: false, stackable: false, confiscate: 3 },
     { charge: 'Theft - Item(s) Worth > $500', fine: 100, jail: 15, note: false, stackable: false, confiscate: 3 }, 
     { charge: 'Theft - Item(s) Worth > $1500', fine: 150, jail: 15, note: false, stackable: false, confiscate: 3 },
     { charge: 'Corruption Of A Court Officer', fine: 30, jail: 15, note: false, stackable: true, confiscate: 0 }, 
-    { charge: 'Impersonating A Court Officer', fine: 100, jail: 15, note: false, stackable: false, confiscate: 3 }, 
+    { charge: 'Impersonating A Court Officer', fine: 250, jail: 20, note: false, stackable: false, confiscate: 3 }, 
     { charge: 'Brandishing', fine: 25, jail: 5, note: true, stackable: false, confiscate: 0 },
     { charge: 'Assault', fine: 25, jail: 5, note: false, stackable: false, confiscate: 0 }, 
     { charge: 'Assault - 1st Offense', fine: 25, jail: 5, note: false, stackable: false, confiscate: 0 },
@@ -49,10 +50,13 @@ const chargeList = [
     { charge: 'Attempted Robbery', fine: 100, jail: 10, note: false, stackable: false, confiscate: 5 }, 
     { charge: 'Robbery', fine: 200, jail: 15, note: false, stackable: false, confiscate: 5 },
     { charge: 'Attempted Murder', fine: 100, jail: 15, note: false, stackable: false, confiscate: 1 }, 
-    { charge: 'Attempted Mass Murder', fine: 150, jail: 20, note: false, stackable: false, confiscate: 1 },
-    { charge: 'Murder', fine: 150, jail: 20, note: false, stackable: false, confiscate: 1 }, 
+    { charge: 'Attempted Mass Murder', fine: 200, jail: 20, note: false, stackable: false, confiscate: 1 },
+    { charge: 'Murder', fine: 200, jail: 20, note: false, stackable: false, confiscate: 1 }, 
     { charge: 'Mass Murder', fine: 250, jail: 25, note: false, stackable: false, confiscate: 1 },
-    { charge: 'Violent Incompliance Withing Custody', fine: 50, jail: 10, note: true, stackable: true, confiscate: 0 } 
+    { charge: 'Violent Incompliance Withing Custody', fine: 50, jail: 10, note: true, stackable: true, confiscate: 0 }, 
+    { charge: 'Attempted Murder of a Government Official', fine: 50, jail: 15, note: true, stackable: true, confiscate: 1 }, 
+    { charge: 'Murder of a Government Official', fine: 100, jail: 30, note: true, stackable: true, confiscate: 1 }, 
+    { charge: 'Use of a Marksmen in Major Crimes', fine: 50, jail: 5, note: true, stackable: false, confiscate: 1 }
 ];
 
 const confiscates = [
