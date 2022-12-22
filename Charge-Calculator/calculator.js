@@ -146,27 +146,8 @@ $(document).ready(function(){
     });
 
     $('.stacking').on('change', function(){
-        fine = calculateFine(charge.fine, stackingBox.val());
-        if (fine > charge.stackFineCap){
-            fineBox.val(charge.stackFineCap);
-        } else {
-            fineBox.val(fine);
-        }
-        jail = calculateFine(charge.jail, stackingBox.val());
-        if (jail > charge.stackJailCap){
-            jailBox.val(charge.stackJailCap);
-        } else {
-            jailBox.val(jail);
-        }
 
-        if ( fine > 500) {
-            if($('#harsh-mode').is(':checked')){
-                fineBox.val(fine);
-            } else {
-                fineBox.val(500);
-            }
-        }
-
+        updateFines();
         updateTotalJail();
         updateTotalFine();
     });
