@@ -187,7 +187,7 @@ function updateTotalFine(){
     });
 
     if($('#reduce-fine').is(':checked')){
-        totalFine = totalFine - (totalFine * .10);
+        totalFine = totalFine - (totalFine * .25);
     };
 
     if (totalFine > 500) {
