@@ -31,8 +31,8 @@ const chargeList = [
     { charge: 'Corruption Of A Court Officer', fine: 30, jail: 15, note: false, stackable: true, stackJailCap: 15, stackFineCap: 90, confiscate: 0 }, 
     { charge: 'Impersonating A Court Officer', fine: 250, jail: 20, note: false, stackable: false, stackJailCap: 20, stackFineCap: 250, confiscate: 3 }, 
     { charge: 'Brandishing', fine: 25, jail: 5, note: true, stackable: false, stackJailCap: 5, stackFineCap: 25, confiscate: 0 },
-    { charge: 'Assault', fine: 25, jail: 5, note: false, stackable: false, stackJailCap: 5, stackFineCap: 25, confiscate: 0 }, 
-    { charge: 'Assault - 1st Offense', fine: 25, jail: 5, note: false, stackable: false, stackJailCap: 5, stackFineCap: 25, confiscate: 0 },
+    { charge: 'Assault', fine: 15, jail: 5, note: false, stackable: false, stackJailCap: 5, stackFineCap: 25, confiscate: 0 }, 
+    { charge: 'Assault - 1st Offense', fine: 15, jail: 5, note: false, stackable: false, stackJailCap: 5, stackFineCap: 25, confiscate: 0 },
     { charge: 'Assault - 2nd Offense', fine: 35, jail: 10, note: false, stackable: false, stackJailCap: 10, stackFineCap: 35, confiscate: 0 }, 
     { charge: 'Assault - Continuous', fine: 50, jail: 15, note: false, stackable: false, stackJailCap: 15, stackFineCap: 50, confiscate: 0 },
     { charge: 'Kidnapping', fine: 25, jail: 5, note: false, stackable: false, stackJailCap: 5, stackFineCap: 25, confiscate: 0 }, 
@@ -113,6 +113,7 @@ $(document).ready(function(){
 
         }
 
+        /*
         fine = calculateFine(charge.fine, stackingBox.val());
         
         
@@ -121,6 +122,7 @@ $(document).ready(function(){
         } else {
             fineBox.val(fine);
         }
+        */
         jail = calculateFine(charge.jail, stackingBox.val());
         if (jail > charge.stackJailCap){
             jailBox.val(charge.stackJailCap);
@@ -128,6 +130,7 @@ $(document).ready(function(){
             jailBox.val(jail);
         }
 
+        /*
         if ( fine > 500) {
             if($('#harsh-mode').is(':checked')){
                 fineBox.val(fine);
@@ -135,10 +138,10 @@ $(document).ready(function(){
                 fineBox.val(500);
             }
         }
-
-
+        */
+        updateFines();
         updateTotalJail(jail);
-        updateTotalFine(fine);
+        //updateTotalFine(fine);
 
         updateConfiscation();
 
