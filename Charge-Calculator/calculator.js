@@ -208,6 +208,7 @@ function updateFines(){
                 }
             }
         }
+        updateTotalFine(fine);
     })
 }
 
