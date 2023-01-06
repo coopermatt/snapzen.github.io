@@ -113,16 +113,6 @@ $(document).ready(function(){
 
         }
 
-        /*
-        fine = calculateFine(charge.fine, stackingBox.val());
-        
-        
-        if (fine > charge.stackFineCap){
-            fineBox.val(charge.stackFineCap);
-        } else {
-            fineBox.val(fine);
-        }
-        */
         jail = calculateFine(charge.jail, stackingBox.val());
         if (jail > charge.stackJailCap){
             jailBox.val(charge.stackJailCap);
@@ -130,18 +120,9 @@ $(document).ready(function(){
             jailBox.val(jail);
         }
 
-        /*
-        if ( fine > 500) {
-            if($('#harsh-mode').is(':checked')){
-                fineBox.val(fine);
-            } else {
-                fineBox.val(500);
-            }
-        }
-        */
         updateFines();
         updateTotalJail(jail);
-        //updateTotalFine(fine);
+
 
         updateConfiscation();
 
@@ -247,19 +228,27 @@ function updateTotalFine(){
         totalFine = totalFine+countFine;
     });
 
-    if($('#reduce-fine').is(':checked')){
-        totalFine = totalFine - (totalFine * .25);
-    };
-
     if (totalFine > 500) {
         if($('#harsh-mode').is(':checked')){
+            if($('#reduce-fine').is(':checked')){
+                totalFine = totalFine - (totalFine * .25);
+            };
             totalFineBox.val(totalFine);
         } else {
-            totalFineBox.val(500);
+            if($('#reduce-fine').is(':checked')){
+                totalFineBox.val(500 - (500 * .25));
+            } else {
+                totalFineBox.val(500);
+            }
         }
     } else {
+        if($('#reduce-fine').is(':checked')){
+            totalFine = totalFine - (totalFine * .25);
+        };
         totalFineBox.val(totalFine);
     } 
+
+
 }
 function updateTotalJail(){
     var totalJailBox = $('#totalJail');
