@@ -82,9 +82,9 @@ textarea#confiscate{
     border-color: #660000;
 }
 .reset-button{
-    margin-top: 5%;
-    height: 80px;
-    width: 180px;
+    margin: 5% 0 5% 0;
+    height: 55px;
+    width: 150px;
 }
 
 .calc-wrapper{

@@ -44,9 +44,9 @@ const chargeList = [
     { charge: 'Dueling', fine: 50, jail: 15, note: false, stackable: false, stackJailCap: 15, stackFineCap: 50, confiscate: 1 }, 
     { charge: 'Arson', fine: 75, jail: 10, note: false, stackable: false, stackJailCap: 10, stackFineCap: 75, confiscate: 2 },
     { charge: 'Unlawful Discharge Of A Weapon', fine: 30, jail: 10, note: false, stackable: false, stackJailCap: 10, stackFineCap: 30, confiscate: 1 }, 
-    { charge: 'Contraband - Class A', fine: 15, jail: 0, note: false, stackable: true, stackJailCap: 0, stackFineCap: 9999999, confiscate: 2 },
-    { charge: 'Contraband - Class B', fine: 35, jail: 0, note: false, stackable: true, stackJailCap: 0, stackFineCap: 9999999, confiscate: 2 }, 
-    { charge: 'Contraband - Class C', fine: 100, jail: 0, note: false, stackable: true, stackJailCap: 0, stackFineCap: 9999999, confiscate: 2 },
+    { charge: 'Class A Contraband', fine: 15, jail: 0, note: false, stackable: true, stackJailCap: 0, stackFineCap: 9999999, confiscate: 2 },
+    { charge: 'Class B Contraband', fine: 35, jail: 0, note: false, stackable: true, stackJailCap: 0, stackFineCap: 9999999, confiscate: 2 }, 
+    { charge: 'Class C Contraband', fine: 100, jail: 0, note: false, stackable: true, stackJailCap: 0, stackFineCap: 9999999, confiscate: 2 },
     { charge: 'Attempted Robbery', fine: 100, jail: 10, note: false, stackable: false, stackJailCap: 10, stackFineCap: 100, confiscate: 5 }, 
     { charge: 'Robbery', fine: 200, jail: 15, note: false, stackable: false, stackJailCap: 15, stackFineCap: 200, confiscate: 5 },
     { charge: 'Attempted Murder', fine: 100, jail: 15, note: false, stackable: false, stackJailCap: 15, stackFineCap: 100, confiscate: 1 }, 
@@ -298,4 +298,31 @@ function resetCalc(){
     $('#confiscate').val("N/A");
     $('#harsh-mode').prop('checked', false);
     $('#reduce-fine').prop('checked', false);
+}
+
+function clipboardCharges(){
+    var copyChargeList = [];
+    
+    $('.charge-value').each(function(){
+        var copyCharge = null; 
+        var copyStack = null;
+        var chargeID = this.id;
+        var rowID = getRowID(chargeID);
+        var stackingBox = $("#stacking-" + rowID);
+        var selectionBox = $("#charge-" + rowID);
+        console.log(selectionBox);
+        copyCharge = selectionBox.val(); 
+        copyStack = stackingBox.val();
+        console.log(copyCharge);
+
+        var chargeToClipboard = copyStack + "x " + copyCharge;
+
+        if (copyCharge !== "") {
+            copyChargeList.push(chargeToClipboard);
+        }
+    });
+    console.log(copyChargeList);
+    if(navigator && navigator.clipboard && navigator.clipboard.writeText){
+        return navigator.clipboard.writeText(copyChargeList.join('\r\n'));
+    } 
 }
