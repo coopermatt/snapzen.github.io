@@ -199,24 +199,40 @@ function getRowID(elementID){
 }
 
 function updateConfiscation(){
-    var highestConfID = null;
+    var confIDList = [];
+    var confiscateThis ="";
+
     $('.confiscation').each(function(){
         var thisID = $(this).val();
-        if (thisID > highestConfID) {
-            highestConfID = thisID;
+        if (confIDList.indexOf(thisID) === -1 && thisID != 0){
+            confIDList.push(thisID);
         }
     });
 
-    var confiscationChoosen = $.grep(confiscates, function(n, i){
-        return n.id ==highestConfID;
-    });
-
-    if (confiscationChoosen.length > 0){
-        id = confiscationChoosen[0];
-        console.log(id.conf);
-        $('#confiscate').val(id.conf);
-        
+    if(confIDList.includes("5") && confIDList.includes("1")){
+        const index = confIDList.indexOf("1");
+        confIDList.splice(index, 1);
     }
+
+
+    if (confIDList.length != 0){
+        confIDList.forEach((id) => {
+        
+            var confiscationChoosen = $.grep(confiscates, function(n, i){
+                return n.id == id;
+            });
+    
+            if (confiscationChoosen.length > 0){
+                id = confiscationChoosen[0];  
+                confiscateThis = confiscateThis + id.conf + "\r\n";
+                
+            }
+    
+        }); 
+    } else { confiscateThis = "N/A"; }
+    
+    $('#confiscate').val(confiscateThis);
+    console.log(confiscateThis);
 }
 
 
